@@ -1,0 +1,144 @@
+/* Reset and Basic Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+header, nav, section, footer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #fdf1b7;  /* Use the background color from the OAG logo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    max-height: 50px;  /* Adjust the logo size */
+    max-width: 100%;
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    display: flex;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.search-bar button {
+    padding: 8px 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-buttons a {
+    margin-left: 10px;
+    color: #333;
+}
+
+/* Category Bar */
+.category-bar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.category-bar a {
+    color: white;
+    font-size: 14px;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+    text-align: center;
+    padding: 15px 0;  /* Increased padding for slightly larger banner */
+    background-color: #fdf1b7;
+    font-size: 22px;  /* Slightly smaller font for a more compact look */
+    font-weight: bold;
+    margin-top: 20px;  /* Add some space from the top */
+    border-radius: 8px;  /* Rounded corners for a more modern look */
+    background-image: url('static/your-banner-image.jpg'); /* Path to your banner image */
+    background-size: cover; /* Ensures the image covers the banner area */
+    background-position: center; /* Keeps the image centered */
+}
+
+/* Product Section */
+.product-section {
+    padding: 20px;
+}
+
+.product-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product a {
+    display: block;
+    margin-top: 10px;
+    background-color: #333;
+    color: white;
+    padding: 8px 0;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+    background-color: #fdf1b7; /* Same yellow color as top bar */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Canada Flag */
+.canada-flag {
+    width: 20px; /* Adjust the size of the flag */
+    height: auto;
+    margin-left: 5px; /* Add some space between the text and the flag */
+}
