@@ -4,11 +4,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     overflow-x: hidden; /* Prevent horizontal scroll */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center all content horizontally */
-    justify-content: flex-start;
-    width: 100%;
 }
 
 /* Header, Nav, Section, Footer */
@@ -81,18 +76,28 @@ header, nav, section, footer {
     margin: 5px 10px;
 }
 
+/* Welcome Banner */
+.welcome-banner {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.welcome-banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 /* Product Section */
 .product-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two products per row */
     gap: 20px;
-    padding: 10px;
+    padding: 20px 5%; /* Add horizontal padding to center the content */
     margin: 0 auto;
-    max-width: 1200px; /* Limit max width of product grid */
-    width: 100%; /* Ensure grid is responsive */
+    width: 90%; /* Make sure the grid spans within the container */
+    max-width: 1200px; /* Optional, adjust to your preference */
     justify-items: center; /* Center products horizontally */
-    box-sizing: border-box;
-    text-align: center; /* Center text within each product */
 }
 
 /* Product */
@@ -139,7 +144,7 @@ header, nav, section, footer {
     .product-section {
         grid-template-columns: repeat(2, 1fr); /* Keep 2 products per row on mobile */
         gap: 15px;
-        padding: 10px;
+        padding: 10px 5%; /* Add padding for mobile view */
     }
 
     .product {
