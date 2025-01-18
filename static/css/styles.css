@@ -17,31 +17,28 @@ header, nav, section, footer {
 
 /* Top Bar */
 .top-bar {
-    background-color: #fdf1b7;
+    background-color: #fdf1b7;  /* Use the background color from the OAG logo */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap for smaller screens */
     padding: 10px 20px;
 }
 
 .logo img {
-    max-height: 50px;
+    max-height: 50px;  /* Adjust the logo size */
     max-width: 100%;
 }
 
 .search-bar {
     flex-grow: 1;
-    margin: 10px 0; /* Add spacing for mobile */
+    margin: 0 20px;
     display: flex;
-    flex-wrap: wrap; /* Ensure proper layout on smaller screens */
 }
 
 .search-bar input {
     flex: 1;
     padding: 8px;
     font-size: 14px;
-    min-width: 200px; /* Prevent input from shrinking too much */
 }
 
 .search-bar button {
@@ -52,15 +49,9 @@ header, nav, section, footer {
     cursor: pointer;
 }
 
-.auth-buttons {
-    display: flex;
-    gap: 10px; /* Space between buttons */
-    margin-top: 10px;
-}
-
 .auth-buttons a {
+    margin-left: 10px;
     color: #333;
-    font-size: 14px;
 }
 
 /* Category Bar */
@@ -70,27 +61,25 @@ header, nav, section, footer {
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
-    flex-wrap: wrap; /* Adjust categories for smaller screens */
 }
 
 .category-bar a {
     color: white;
     font-size: 14px;
-    margin: 5px 0; /* Add space between links */
 }
 
 /* Welcome Banner */
 .welcome-banner {
     text-align: center;
-    padding: 15px 0;
+    padding: 15px 0;  /* Increased padding for slightly larger banner */
     background-color: #fdf1b7;
-    font-size: 22px;
+    font-size: 22px;  /* Slightly smaller font for a more compact look */
     font-weight: bold;
-    margin-top: 20px;
-    border-radius: 8px;
-    background-image: url('static/your-banner-image.jpg');
-    background-size: cover;
-    background-position: center;
+    margin-top: 20px;  /* Add some space from the top */
+    border-radius: 8px;  /* Rounded corners for a more modern look */
+    background-image: url('static/your-banner-image.jpg'); /* Path to your banner image */
+    background-size: cover; /* Ensures the image covers the banner area */
+    background-position: center; /* Keeps the image centered */
 }
 
 /* Product Section */
@@ -100,9 +89,8 @@ header, nav, section, footer {
 
 .product-row {
     display: flex;
-    flex-wrap: wrap; /* Allow products to wrap on smaller screens */
+    flex-wrap: wrap;
     justify-content: space-around;
-    gap: 10px; /* Add spacing between products */
 }
 
 .product {
@@ -111,7 +99,7 @@ header, nav, section, footer {
     padding: 10px;
     margin: 10px;
     text-align: center;
-    width: calc(50% - 20px); /* Two products per row on smaller screens */
+    width: 150px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -136,34 +124,4 @@ footer {
     text-align: center;
     padding: 10px 0;
     font-size: 12px;
-}
-
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-    .search-bar {
-        flex-direction: column;
-    }
-
-    .search-bar input {
-        margin-bottom: 10px; /* Add spacing for stacked inputs */
-    }
-
-    .product {
-        width: calc(100% - 20px); /* Full-width products on mobile */
-    }
-
-    .auth-buttons {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .category-bar {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .welcome-banner {
-        font-size: 18px; /* Slightly smaller font for mobile */
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
 }
