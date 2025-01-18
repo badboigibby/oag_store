@@ -4,12 +4,12 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     overflow-x: hidden; /* Prevent horizontal scroll */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
 }
 
-a {
-    text-decoration: none;
-    color: #333;
-}
+/* Other Styles */
 
 header, nav, section, footer {
     width: 100%;
@@ -24,6 +24,7 @@ header, nav, section, footer {
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    width: 100%;
 }
 
 .logo img {
@@ -80,6 +81,7 @@ header, nav, section, footer {
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
+    width: 100%;
 }
 
 .category-bar a {
@@ -92,6 +94,7 @@ header, nav, section, footer {
 .welcome-banner {
     text-align: center;
     margin: 20px 0;
+    width: 100%;
 }
 
 .welcome-banner img {
@@ -103,16 +106,18 @@ header, nav, section, footer {
 /* Product Section */
 .product-section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Ensure two products per row */
+    grid-template-columns: repeat(2, 1fr); /* Two products per row */
     gap: 20px;
     padding: 10px;
     margin: 0 auto;
-    max-width: 100%;
-    justify-items: center; /* Center products within each grid item */
+    width: 100%;
+    max-width: 1200px; /* Limit the maximum width */
+    justify-items: center; /* Center products within the grid */
     box-sizing: border-box;
+    text-align: center; /* Ensure text is centered in the product */
 }
 
-/* Ensure products fit the banner width */
+/* Product */
 .product {
     background-color: white;
     border-radius: 8px;
@@ -120,7 +125,7 @@ header, nav, section, footer {
     text-align: center;
     padding: 10px;
     margin: 0;
-    width: 100%; /* Ensures product fills available space within grid */
+    width: 100%; /* Ensure each product occupies full width */
 }
 
 .product img {
@@ -162,13 +167,13 @@ html, body {
 /* Mobile Styles */
 @media (max-width: 768px) {
     .product-section {
-        grid-template-columns: repeat(2, 1fr); /* Keep 2 products per row even on mobile */
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 products per row */
+        gap: 15px;
+        padding: 10px;
     }
 
-    /* Adjust product grid layout for smaller screens */
-    .product-section {
-        grid-template-columns: repeat(2, 1fr); /* Two products per row */
-        gap: 15px;
+    .product {
+        width: 100%; /* Ensure product fills the width */
     }
 }
 
@@ -227,7 +232,7 @@ footer {
     }
 
     .product-section {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Maintain 2 products per row */
         gap: 10px;
     }
 }
