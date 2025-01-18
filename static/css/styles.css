@@ -102,7 +102,7 @@ header, nav, section, footer {
 /* Product Row */
 .product-row {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 columns for desktop and mobile */
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for product row */
     gap: 10px; /* Space between items */
     justify-items: center; /* Center the products horizontally */
     width: 100%; /* Ensure full width */
@@ -180,7 +180,7 @@ footer {
 
     /* Ensure the product row stretches from edge to edge */
     .product-row {
-        grid-template-columns: repeat(6, 1fr); /* 6 columns for product row */
+        grid-template-columns: repeat(7, 1fr); /* 7 columns for product row */
         gap: 10px;
         width: 100%;
         margin: 0;
@@ -191,7 +191,7 @@ footer {
     .product {
         width: 100%; /* Full-width products */
         box-sizing: border-box;
-        max-width: 160px; /* Limit product width */
+        max-width: 140px; /* Limit product width slightly for mobile */
     }
 
     /* Ensure there’s no unnecessary space around the products */
