@@ -40,6 +40,23 @@
         <img src="{{ url_for('static', filename='images/your-banner-image.png') }}" alt="Welcome Banner">
     </section>
 
+    <!-- Product Section -->
+    <section class="product-section">
+        {% for category, items in products.items() %}
+            <h2>{{ category }}</h2>
+            <div class="product-row">
+                {% for item in items %}
+                    <div class="product">
+                        <img src="{{ item['image'] }}" alt="{{ item['name'] }} - Product Image">
+                        <p>{{ item['name'] }}</p>
+                        <p>{{ item['price'] }}</p>
+                        <a href="{{ item['link'] }}" target="_blank" rel="noopener noreferrer">Buy Now</a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </section>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 OAG Store. All rights reserved.</p>
