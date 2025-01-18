@@ -166,10 +166,10 @@ footer {
         box-sizing: border-box; /* Ensure padding and border are included in the width */
     }
 
-    /* Ensure the product row stretches from edge to edge */
+    /* Ensure the product row stretches from edge to edge with 6 columns */
     .product-row {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr; /* 6 columns */
+        grid-template-columns: repeat(6, 1fr); /* 6 columns */
         gap: 10px; /* Space between items */
     }
 
