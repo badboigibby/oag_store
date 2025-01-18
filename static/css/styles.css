@@ -202,6 +202,8 @@ footer {
     /* Ensure search, category bar, and footer span edge-to-edge on mobile */
     .search-bar, .category-bar, footer {
         width: 100%; /* Stretch them edge to edge */
+        max-width: 160px; 
         padding: 5px 0; /* Remove extra padding */
+        margin: 0;
     }
 }
