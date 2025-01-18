@@ -69,7 +69,7 @@ header, nav, section, footer {
     flex-wrap: wrap; /* Allow categories to stack on small screens */
     justify-content: space-around;
     padding: 10px 0;
-    width: 100%;
+    width: 100%; /* Ensure the category bar spans the full width */
 }
 
 .category-bar a {
@@ -87,7 +87,7 @@ header, nav, section, footer {
     font-weight: bold;
     margin-top: 10px;
     border-radius: 8px;
-    background-image: url('static/your-banner-image.png');
+    background-image: url('static/your-banner-image.png'); 
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -145,7 +145,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     font-size: 12px;
-    width: 100%;
+    width: 100%; /* Make footer span the full width */
 }
 
 /* Bottom Bar */
@@ -174,20 +174,8 @@ footer {
         padding: 5px 0; /* Compact spacing for mobile */
     }
 
-    /* Adjust search bar to be full width */
-    .search-bar {
-        width: 100%;
-        padding: 0 5%;
-    }
-
     .auth-buttons a {
         font-size: 10px; /* Smaller fonts for links */
-    }
-
-    /* Ensure the category bar stretches from edge to edge */
-    .category-bar {
-        padding: 0 5%; /* Ensure padding is applied correctly */
-        width: 100%;
     }
 
     /* Ensure the product row stretches from edge to edge */
@@ -209,5 +197,11 @@ footer {
     /* Ensure there’s no unnecessary space around the products */
     .product-section {
         padding: 5px; /* Less padding */
+    }
+
+    /* Ensure search, category bar, and footer span edge-to-edge on mobile */
+    .search-bar, .category-bar, footer {
+        width: 100%;
+        padding: 5px 0; /* Remove extra padding */
     }
 }
