@@ -6,15 +6,16 @@ body {
     overflow-x: hidden; /* Prevent horizontal scroll */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
+    align-items: center; /* Center all content horizontally */
+    justify-content: flex-start;
+    width: 100%;
 }
 
-/* Other Styles */
-
+/* Header, Nav, Section, Footer */
 header, nav, section, footer {
     width: 100%;
-    margin: 0 auto;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Top Bar */
@@ -63,16 +64,6 @@ header, nav, section, footer {
     color: #333;
 }
 
-/* Note Section */
-.note-section {
-    background-color: #fff3cd;
-    color: #856404;
-    text-align: center;
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 14px;
-}
-
 /* Category Bar */
 .category-bar {
     background-color: #333;
@@ -90,19 +81,6 @@ header, nav, section, footer {
     margin: 5px 10px;
 }
 
-/* Welcome Banner */
-.welcome-banner {
-    text-align: center;
-    margin: 20px 0;
-    width: 100%;
-}
-
-.welcome-banner img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
 /* Product Section */
 .product-section {
     display: grid;
@@ -110,11 +88,11 @@ header, nav, section, footer {
     gap: 20px;
     padding: 10px;
     margin: 0 auto;
-    width: 100%;
-    max-width: 1200px; /* Limit the maximum width */
-    justify-items: center; /* Center products within the grid */
+    max-width: 1200px; /* Limit max width of product grid */
+    width: 100%; /* Ensure grid is responsive */
+    justify-items: center; /* Center products horizontally */
     box-sizing: border-box;
-    text-align: center; /* Ensure text is centered in the product */
+    text-align: center; /* Center text within each product */
 }
 
 /* Product */
@@ -125,7 +103,7 @@ header, nav, section, footer {
     text-align: center;
     padding: 10px;
     margin: 0;
-    width: 100%; /* Ensure each product occupies full width */
+    width: 100%; /* Each product occupies full width of grid item */
 }
 
 .product img {
@@ -156,18 +134,10 @@ header, nav, section, footer {
     background-color: #555;
 }
 
-/* Disable zooming in and out */
-html, body {
-    touch-action: manipulation;
-    -ms-touch-action: manipulation;
-    overflow: hidden;
-    user-select: none;
-}
-
 /* Mobile Styles */
 @media (max-width: 768px) {
     .product-section {
-        grid-template-columns: repeat(2, 1fr); /* Keep 2 products per row */
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 products per row on mobile */
         gap: 15px;
         padding: 10px;
     }
@@ -198,41 +168,4 @@ footer {
     width: 18px;
     height: auto;
     margin-left: 5px;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .top-bar {
-        padding: 5px;
-    }
-
-    .search-bar {
-        flex-direction: column;
-    }
-
-    .search-bar input, .search-bar button {
-        font-size: 12px;
-        padding: 8px;
-    }
-
-    .auth-buttons a {
-        font-size: 12px;
-    }
-
-    .category-bar a {
-        font-size: 12px;
-    }
-
-    .note-section {
-        font-size: 12px;
-    }
-
-    footer, .bottom-bar {
-        font-size: 12px;
-    }
-
-    .product-section {
-        grid-template-columns: repeat(2, 1fr); /* Maintain 2 products per row */
-        gap: 10px;
-    }
 }
