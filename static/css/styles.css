@@ -173,9 +173,13 @@ footer {
     gap: 10px; /* Space between items */
     justify-items: center; /* Center the products horizontally */
     width: 100%;
-    max-width: 100%; /* Ensure no overflow */
-    margin: 0 auto; /* Center the grid in the container */
+    margin: 0 auto; /* Center the grid */
+    max-width: 100%; /* Ensure the grid takes full width */
+    padding-left: 10px; /* Add some padding on the left side */
+    padding-right: 10px; /* Add some padding on the right side */
+    box-sizing: border-box; /* Ensure no overflow */
 }
+
 
 
 /* Adjust padding and margin for better spacing */
