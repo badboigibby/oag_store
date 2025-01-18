@@ -207,6 +207,7 @@ footer {
 
     .search-bar {
         width: 100%;
+        margin-top: 0;
     }
 
     /* Category Bar at edge-to-edge */
