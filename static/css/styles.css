@@ -174,12 +174,16 @@ footer {
     justify-items: center; /* Center the products horizontally */
     width: 100%;
     margin: 0 auto; /* Center the grid */
-    max-width: 100%; /* Ensure the grid takes full width */
-    padding-left: 10px; /* Add some padding on the left side */
-    padding-right: 10px; /* Add some padding on the right side */
-    box-sizing: border-box; /* Ensure no overflow */
+    padding: 0 5px; /* Adjust padding to eliminate gaps on the sides */
+    box-sizing: border-box; /* Ensure the box-sizing is correct to avoid overflow */
 }
 
+/* Adjust product container size */
+.product {
+    width: 100%; /* Ensure products take full width of their grid cell */
+    max-width: 180px; /* Limit max-width to prevent overly stretched images */
+    box-sizing: border-box; /* Ensure padding and borders don't exceed the width */
+}
 
 
 /* Adjust padding and margin for better spacing */
