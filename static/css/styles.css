@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 a {
@@ -74,38 +75,32 @@ header, nav, section, footer {
 /* Welcome Banner */
 .welcome-banner {
     text-align: center;
-    padding: 15px 0;  /* Increased padding for slightly larger banner */
+    padding: 15px 0;  /* Adjust padding for a better fit */
     background-color: #fdf1b7;
-    font-size: 22px;  /* Slightly smaller font for a more compact look */
+    font-size: 22px;  
     font-weight: bold;
-    margin-top: 20px;  /* Add some space from the top */
-    border-radius: 8px;  /* Rounded corners for a more modern look */
+    margin-top: 10px;  
+    border-radius: 8px;  
     background-image: url('static/your-banner-image.jpg'); /* Path to your banner image */
-    background-size: contain; /* Ensure the entire image is visible */
-    background-position: center; /* Keeps the image centered */
-    height: 200px; /* Set a fixed height to display the entire banner */
+    background-size: cover; /* Ensures the image covers the banner area */
+    background-position: center; 
+    height: 150px; /* Reduced height for better layout */
+    overflow: hidden; /* Prevents overflow issues */
 }
 
 /* Product Section */
 .product-section {
-    padding: 10px; /* Reduced padding for more screen space */
-}
-
-.product-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Distribute products evenly across the screen */
-    margin: 0 auto; /* Center the products on the screen */
-    max-width: 1200px; /* Ensure it doesn’t stretch too wide on large screens */
+    padding: 10px;
+    display: grid; /* Use grid for product layout */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible grid */
+    gap: 10px; /* Space between products */
 }
 
 .product {
     background-color: white;
     border: 1px solid #ddd;
     padding: 10px;
-    margin: 5px; /* Adjusted margins to fit more products */
     text-align: center;
-    width: calc(33.33% - 10px); /* Three products per row on larger screens */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -123,29 +118,13 @@ header, nav, section, footer {
     border-radius: 5px;
 }
 
-/* Responsive Adjustments */
+/* Disable Zoom */
 @media (max-width: 768px) {
-    .product {
-        width: calc(50% - 10px); /* Two products per row on medium screens */
+    html {
+        touch-action: manipulation; /* Prevent double-tap zoom */
     }
-
-    .search-bar {
-        margin: 0; /* Remove margins for small screens */
-    }
-
-    .search-bar input,
-    .search-bar button {
-        font-size: 12px; /* Adjust font size for small devices */
-    }
-}
-
-@media (max-width: 480px) {
-    .product {
-        width: calc(100% - 10px); /* One product per row on small screens */
-    }
-
-    .welcome-banner {
-        height: auto; /* Adjust height for smaller screens */
+    body {
+        overscroll-behavior: contain; /* Prevent scrolling beyond boundaries */
     }
 }
 
