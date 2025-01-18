@@ -14,7 +14,6 @@ a {
 header, nav, section, footer {
     width: 100%;
     margin: 0 auto;
-    padding: 0;
 }
 
 /* Top Bar */
@@ -24,31 +23,30 @@ header, nav, section, footer {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px 5%; /* Added padding for better spacing */
     width: 100%;
 }
 
 .logo img {
-    max-height: 40px; /* Scaled for mobile */
+    max-height: 40px;
     max-width: 100%;
 }
 
 .search-bar {
     flex-grow: 1;
     display: flex;
-    margin: 10px 0; /* Space for smaller screens */
-    width: 100%; /* Make the search bar span the full width */
+    margin: 10px 0;
 }
 
 .search-bar input {
     flex: 1;
     padding: 6px;
-    font-size: 12px; /* Scaled down for mobile */
+    font-size: 12px;
 }
 
 .search-bar button {
     padding: 6px 12px;
-    font-size: 12px; /* Scaled for mobile */
+    font-size: 12px;
     background-color: #333;
     color: white;
     border: none;
@@ -56,7 +54,7 @@ header, nav, section, footer {
 }
 
 .auth-buttons a {
-    font-size: 12px; /* Adjusted for mobile */
+    font-size: 12px;
     margin: 5px 5px 0 0;
     color: #333;
 }
@@ -66,28 +64,28 @@ header, nav, section, footer {
     background-color: #333;
     color: white;
     display: flex;
-    flex-wrap: wrap; /* Allow categories to stack on small screens */
-    justify-content: space-around;
-    padding: 10px 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 5%; /* Added padding to make it stretch edge-to-edge */
     width: 100%;
 }
 
 .category-bar a {
     color: white;
-    font-size: 12px; /* Reduced size for mobile */
-    margin: 5px 0; /* Spacing for stacked links */
+    font-size: 12px;
+    margin: 5px 0;
 }
 
 /* Welcome Banner */
 .welcome-banner {
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 5%; /* Added padding for edge-to-edge */
     background-color: #fdf1b7;
-    font-size: 18px; /* Adjusted for mobile */
+    font-size: 18px;
     font-weight: bold;
     margin-top: 10px;
     border-radius: 8px;
-    background-image: url('static/your-banner-image.png'); 
+    background-image: url('static/your-banner-image.png');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -95,32 +93,24 @@ header, nav, section, footer {
 
 /* Product Section */
 .product-section {
-    padding: 10px; /* Reduced padding for mobile */
-    width: 100%; /* Full width for product section */
+    padding: 10px 5%; /* Added padding for edge-to-edge alignment */
 }
 
-/* Product Row */
 .product-row {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 columns for product row */
-    gap: 10px; /* Space between items */
-    justify-items: center; /* Center the products horizontally */
-    width: 100%; /* Ensure full width */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-    box-sizing: border-box; /* Ensure no overflow */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; /* Make sure the row stretches full width */
 }
 
-/* Product */
 .product {
     background-color: white;
     border: 1px solid #ddd;
     padding: 10px;
+    margin: 5px;
     text-align: center;
-    width: 100%; /* Ensure products take full width of their grid cell */
-    max-width: 160px; /* Prevent products from stretching too much */
-    box-sizing: border-box; /* Ensure padding and borders are included in width calculation */
-    margin: 0;
+    width: 16.5%; /* Adjusted to make 6 items fit in one row */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .product img {
@@ -129,7 +119,7 @@ header, nav, section, footer {
 }
 
 .product a {
-    font-size: 12px; /* Adjusted for mobile */
+    font-size: 12px;
     display: block;
     margin-top: 10px;
     background-color: #333;
@@ -143,7 +133,7 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 5%; /* Added padding for edge-to-edge */
     font-size: 12px;
     width: 100%;
 }
@@ -152,7 +142,7 @@ footer {
 .bottom-bar {
     background-color: #fdf1b7;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 5%; /* Added padding for edge-to-edge */
     font-size: 14px;
     font-weight: bold;
     margin-top: 20px;
@@ -168,34 +158,28 @@ footer {
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
-    /* Ensure everything from search bar, banner, product section, and footer spans edge-to-edge */
     .top-bar, .category-bar, .welcome-banner, .product-section, footer, .bottom-bar {
+        padding: 5px 0; /* Remove padding to fit edge to edge on mobile */
         width: 100%;
-        padding: 5px 0; /* Compact spacing for mobile */
     }
 
     .auth-buttons a {
-        font-size: 10px; /* Smaller fonts for links */
+        font-size: 10px;
     }
 
-    /* Ensure the product row stretches from edge to edge */
+    .product {
+        width: 16.5%;
+    }
+
+    /* Full width for products on mobile */
     .product-row {
-        grid-template-columns: repeat(7, 1fr); /* 7 columns for product row */
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); /* 6 columns on mobile */
         gap: 10px;
         width: 100%;
-        margin: 0;
-        padding: 0;
     }
 
-    /* Adjust product sizing for mobile */
-    .product {
-        width: 100%; /* Full-width products */
-        box-sizing: border-box;
-        max-width: 140px; /* Limit product width slightly for mobile */
-    }
-
-    /* Ensure there’s no unnecessary space around the products */
     .product-section {
-        padding: 5px; /* Less padding */
+        padding: 5px 0;
     }
 }
