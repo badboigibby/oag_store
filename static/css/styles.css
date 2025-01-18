@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
+    touch-action: none; /* Prevent zooming */
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
@@ -14,11 +15,12 @@ a {
 header, nav, section, footer {
     width: 100%;
     margin: 0 auto;
+    text-align: center;
 }
 
 /* Top Bar */
 .top-bar {
-    background-color: #fdf1b7;  /* Use the background color from the OAG logo */
+    background-color: #fdf1b7; /* Use the background color from the OAG logo */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,13 +28,13 @@ header, nav, section, footer {
 }
 
 .logo img {
-    max-height: 50px;  /* Adjust the logo size */
+    max-height: 50px; /* Adjust the logo size */
     max-width: 100%;
 }
 
 .search-bar {
     flex-grow: 1;
-    margin: 0 10px; /* Reduced margins for more space */
+    margin: 0 10px;
     display: flex;
 }
 
@@ -40,8 +42,8 @@ header, nav, section, footer {
     flex: 1;
     padding: 8px;
     font-size: 14px;
-    border: 1px solid #ddd; /* Add border for clarity */
-    border-radius: 5px 0 0 5px; /* Rounded corners on the left */
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .search-bar button {
@@ -49,16 +51,36 @@ header, nav, section, footer {
     background-color: #333;
     color: white;
     border: none;
-    border-radius: 0 5px 5px 0; /* Rounded corners on the right */
+    border-radius: 4px;
     cursor: pointer;
 }
 
+.auth-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .auth-buttons a {
-    margin-left: 10px;
+    margin-top: 5px;
     color: #333;
 }
 
-/* Category Bar */
+/* Welcome Banner */
+.welcome-banner {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #fdf1b7;
+    margin-top: 10px;
+    border-radius: 8px;
+    background-image: url('path/to/your/new/banner.jpg'); /* Replace with your banner image path */
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    width: 100%;
+}
+
+/* Category Section */
 .category-bar {
     background-color: #333;
     color: white;
@@ -72,34 +94,24 @@ header, nav, section, footer {
     font-size: 14px;
 }
 
-/* Welcome Banner */
-.welcome-banner {
-    text-align: center;
-    padding: 15px 0;  /* Adjust padding for a better fit */
-    background-color: #fdf1b7;
-    font-size: 22px;  
-    font-weight: bold;
-    margin-top: 10px;  
-    border-radius: 8px;  
-    background-image: url('static/your-banner-image.jpg'); /* Path to your banner image */
-    background-size: cover; /* Ensures the image covers the banner area */
-    background-position: center; 
-    height: 150px; /* Reduced height for better layout */
-    overflow: hidden; /* Prevents overflow issues */
-}
-
 /* Product Section */
 .product-section {
     padding: 10px;
-    display: grid; /* Use grid for product layout */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible grid */
-    gap: 10px; /* Space between products */
+}
+
+.product-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    text-align: center;
 }
 
 .product {
     background-color: white;
     border: 1px solid #ddd;
     padding: 10px;
+    margin: 10px 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -116,16 +128,7 @@ header, nav, section, footer {
     color: white;
     padding: 8px 0;
     border-radius: 5px;
-}
-
-/* Disable Zoom */
-@media (max-width: 768px) {
-    html {
-        touch-action: manipulation; /* Prevent double-tap zoom */
-    }
-    body {
-        overscroll-behavior: contain; /* Prevent scrolling beyond boundaries */
-    }
+    font-size: 12px;
 }
 
 /* Footer */
@@ -135,21 +138,5 @@ footer {
     text-align: center;
     padding: 10px 0;
     font-size: 12px;
-}
-
-/* Bottom Bar */
-.bottom-bar {
-    background-color: #fdf1b7; /* Same yellow color as top bar */
-    text-align: center;
-    padding: 10px 0;
-    font-size: 16px;
-    font-weight: bold;
     margin-top: 20px;
-}
-
-/* Canada Flag */
-.canada-flag {
-    width: 20px; /* Adjust the size of the flag */
-    height: auto;
-    margin-left: 5px; /* Add some space between the text and the flag */
 }
