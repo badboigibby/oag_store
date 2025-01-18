@@ -69,7 +69,7 @@ header, nav, section, footer {
     flex-wrap: wrap; /* Allow categories to stack on small screens */
     justify-content: space-around;
     padding: 10px 0;
-    width: 100%; /* Ensure the category bar spans the full width */
+    width: 100%;
 }
 
 .category-bar a {
@@ -145,7 +145,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     font-size: 12px;
-    width: 100%; /* Ensure footer spans edge to edge */
+    width: 100%;
 }
 
 /* Bottom Bar */
@@ -199,11 +199,25 @@ footer {
         padding: 5px; /* Less padding */
     }
 
-    /* Ensure search, category bar, and footer span edge-to-edge on mobile */
-    .search-bar, .category-bar, footer {
-        width: 100%; /* Stretch them edge to edge */
-        max-width: 160px; 
-        padding: 5px 0; /* Remove extra padding */
-        margin: 0;
+    /* Top Bar and Search bar at edge-to-edge */
+    .top-bar {
+        width: 100%;
+        padding: 0;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    /* Category Bar at edge-to-edge */
+    .category-bar {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Footer at edge-to-edge */
+    footer {
+        width: 100%;
+        padding: 0;
     }
 }
