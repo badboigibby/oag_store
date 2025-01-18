@@ -124,6 +124,18 @@ header, nav, section, footer {
     box-sizing: border-box;
 }
 
+/* Product Section */
+.product-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two products per row */
+    gap: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 100%;
+    justify-items: center; /* Centers the products horizontally */
+    box-sizing: border-box;
+}
+
 /* Ensure that the category is displayed above the products */
 .category-bar {
     text-align: center;
@@ -138,7 +150,6 @@ header, nav, section, footer {
         grid-template-columns: repeat(2, 1fr); /* Keep two products per row even on mobile */
     }
 }
-
 
 /* Ensure the products fit the banner width */
 .product {
