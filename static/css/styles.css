@@ -169,7 +169,7 @@ footer {
     /* Ensure the product row stretches from edge to edge */
     .product-row {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+        grid-template-columns: 1fr 1fr 1fr; /* 6 columns */
         gap: 10px; /* Space between items */
     }
 
