@@ -166,14 +166,17 @@ footer {
     box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 
-/* Adjust the product row to fill the full width */
+/* Adjust the product row to center the products */
 .product-row {
     display: grid;
     grid-template-columns: repeat(6, 1fr); /* 6 columns */
     gap: 10px; /* Space between items */
-    justify-items: stretch; /* Make the products fill the space */
+    justify-items: center; /* Center the products horizontally */
     width: 100%;
+    max-width: 100%; /* Ensure no overflow */
+    margin: 0 auto; /* Center the grid in the container */
 }
+
 
 /* Adjust padding and margin for better spacing */
 .product-section {
