@@ -1,201 +1,138 @@
-/* General Reset */
-body, html {
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    touch-action: manipulation; /* Prevent zooming on mobile */
-    user-select: none; /* Prevent text selection */
-}
-
-/* Top Bar */
-.top-bar {
-    background-color: #fdf1b7;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.logo img {
-    max-height: 40px;
-    max-width: 100%;
-}
-
-.search-bar {
-    flex-grow: 1;
-    margin: 0 10px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.search-bar input {
-    flex: 1;
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    max-width: 60%; /* Reduced width for logo and buttons */
-}
-
-.search-bar button {
-    padding: 8px 16px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.auth-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.auth-buttons a {
-    margin-left: 10px;
+    background-color: #f9f9f9;
     color: #333;
-    text-decoration: none;
-    font-weight: bold;
 }
 
-/* Welcome Banner */
-.welcome-banner {
-    text-align: center;
-    background-color: #fdf1b7;
-    background-image: url('static/your-banner-image.jpg'); /* Replace with your banner path */
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 200px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-/* Category Bar */
-.category-bar {
-    background-color: #333;
+header {
+    background-color: #4CAF50;
     color: white;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    font-size: 14px;
-}
-
-.category-bar a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Product Section */
-.product-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 10px;
     padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    max-height: 40px;
+    vertical-align: middle;
+}
+
+#banner {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#banner img {
     width: 100%;
-    box-sizing: border-box;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
-.category {
-    margin-bottom: 20px;
+/* Electronics Section */
+#electronics {
+    padding: 10px;
+    text-align: center;
 }
 
-.category-title {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: left;
+#electronics h2 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 20px;
+}
+
+.product-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    padding: 10px;
 }
 
 .product {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
     text-align: center;
-    margin: 0;
+    width: 100%;
+    max-width: 150px; /* Slightly larger product size */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 .product img {
-    width: 100%;
-    height: auto;
-    max-width: 120px;
-    margin-bottom: 10px;
+    max-width: 100%;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 3px;
 }
 
 .product p {
+    margin: 5px 0;
     font-size: 14px;
-    margin-bottom: 5px;
 }
 
 .product a {
-    text-decoration: none;
-    background-color: #333;
+    display: inline-block;
+    padding: 5px 10px;
     color: white;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: bold;
+    background-color: #4CAF50;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
 }
 
 .product a:hover {
-    background-color: #555;
+    background-color: #45a049;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 12px;
-}
-
-/* Bottom Bar */
-.bottom-bar {
-    background-color: #fdf1b7;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-/* Mobile Adjustments */
+/* Mobile-Specific Adjustments */
 @media (max-width: 768px) {
-    /* Mobile Layout for Top Bar */
-    .top-bar {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+    body {
+        padding: 0;
     }
 
-    .search-bar {
-        margin-left: 10px;
+    header {
+        padding: 5px;
     }
 
-    .auth-buttons {
-        margin-top: 0;
+    #banner img {
+        max-height: 140px;
     }
 
-    /* Welcome Banner Adjustments */
-    .welcome-banner {
+    #electronics {
+        padding: 5px;
+    }
+
+    #electronics h2 {
         font-size: 18px;
-        height: 150px; /* Adjust banner height */
     }
 
-    /* Product Section Adjustments */
-    .product-section {
-        grid-template-columns: repeat(3, 1fr); /* 3 products per row on mobile */
+    .product {
+        max-width: 120px; /* Ensure proper fit on smaller screens */
+    }
+
+    .product-row {
+        gap: 8px;
     }
 
     .product img {
-        max-width: 100%; /* Adjust image size on mobile */
+        height: 90px; /* Slightly smaller images for phones */
     }
 
-    footer {
-        font-size: 14px;
+    .product p {
+        font-size: 12px;
+    }
+
+    .product a {
+        font-size: 10px;
+        padding: 4px 8px;
     }
 }
