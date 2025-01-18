@@ -112,20 +112,33 @@ header, nav, section, footer {
     box-sizing: border-box;
 }
 
-/* Ensure the grid adapts to the phone orientation */
-@media (max-width: 768px) {
-    .product-section {
-        grid-template-columns: repeat(2, 1fr); /* Ensure two products per row */
-    }
+/* Product Section */
+.product-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two products per row */
+    gap: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 100%;
+    justify-items: center; /* Centers the products horizontally */
+    box-sizing: border-box;
 }
 
-/* Product Category */
+/* Ensure that the category is displayed above the products */
 .category-bar {
     text-align: center;
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 20px; /* Space between category and products */
+    margin-bottom: 20px; /* Adds space between the category and the products */
 }
+
+/* Mobile and tablet screens */
+@media (max-width: 768px) {
+    .product-section {
+        grid-template-columns: repeat(2, 1fr); /* Keep two products per row even on mobile */
+    }
+}
+
 
 /* Ensure the products fit the banner width */
 .product {
