@@ -13,7 +13,7 @@
             <img src="{{ url_for('static', filename='images/oag_logo.png') }}" alt="OAG Logo">
         </div>
         <form class="search-bar" action="/search" method="GET">
-            <input type="text" name="q" placeholder="THIS FEATURE IS CURRENTLY UNAVAILABLE. PLEASE CLICK ON ANY PRODUCT FOR SAMPLES AND REVIEWS." required>
+            <input type="text" name="q" placeholder="Search for products..." required>
             <button type="submit">Search</button>
         </form>
         <div class="auth-buttons">
@@ -22,39 +22,22 @@
         </div>
     </header>
 
-    <!-- Note Under the Banner -->
+    <!-- Note Section -->
     <section class="note-section">
-        <p><strong>Welcome to OAG – Purchases are not processed directly on our site. To make a purchase, click the 'Buy Now' button, which will redirect you to the merchant’s website. Please review product details, samples, and reviews on the merchant site before completing your purchase.</strong></p>
+        <p><strong>Welcome to OAG – Purchases are not processed directly on our site. Click 'Buy Now' to review and purchase products on the merchant’s website.</strong></p>
     </section>
 
     <!-- Category Bar -->
     <nav class="category-bar">
-        <a href="#fashion" aria-label="Fashion Category">Fashion</a>
-        <a href="#beauty-health" aria-label="Beauty and Health Category">Beauty & Health</a>
-        <a href="#sports-games" aria-label="Sports and Games Category">Sports & Games</a>
-        <a href="#electronics" aria-label="Electronics Category">Electronics</a>
+        <a href="#fashion" aria-label="Fashion">Fashion</a>
+        <a href="#beauty-health" aria-label="Beauty and Health">Beauty & Health</a>
+        <a href="#sports-games" aria-label="Sports and Games">Sports & Games</a>
+        <a href="#electronics" aria-label="Electronics">Electronics</a>
     </nav>
 
     <!-- Welcome Banner -->
     <section class="welcome-banner">
-        <img src="{{ url_for('static', filename='images/your-banner-image.png') }}" alt="Welcome Banner" class="banner-img">
-    </section>
-
-    <!-- Product Section -->
-    <section class="product-section">
-        {% for category, items in products.items() %}
-            <h2>{{ category }}</h2>
-            <div class="product-row">
-                {% for item in items %}
-                    <div class="product">
-                        <img src="{{ item['image'] }}" alt="{{ item['name'] }} - Product Image">
-                        <p>{{ item['name'] }}</p>
-                        <p>{{ item['price'] }}</p>
-                        <a href="{{ item['link'] }}" target="_blank" rel="noopener noreferrer" aria-label="Buy {{ item['name'] }} Now">Buy Now</a>
-                    </div>
-                {% endfor %}
-            </div>
-        {% endfor %}
+        <img src="{{ url_for('static', filename='images/your-banner-image.png') }}" alt="Welcome Banner">
     </section>
 
     <!-- Footer -->
@@ -62,7 +45,7 @@
         <p>&copy; 2025 OAG Store. All rights reserved.</p>
     </footer>
 
-    <!-- Bottom Bar with OAG ENGLISH🌍 CANADA Flag -->
+    <!-- Bottom Bar -->
     <footer class="bottom-bar">
         <p>OAG ENGLISH 🌍 CANADA <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg" alt="Canada Flag" class="canada-flag"></p>
     </footer>

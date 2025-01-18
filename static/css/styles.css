@@ -1,36 +1,50 @@
-/* Global Reset */
-body, html {
+/* Reset and Basic Styles */
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+header, nav, section, footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
 }
 
 /* Top Bar */
 .top-bar {
     background-color: #fdf1b7;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding: 10px;
-    width: 100%;
 }
 
-.top-bar .search-bar {
+.logo img {
+    max-height: 50px;
+    margin-bottom: 10px;
+}
+
+.search-bar {
     display: flex;
-    flex-grow: 1;
-    max-width: 100%;
-    margin: 0 10px;
+    width: 100%;
+    max-width: 500px;
 }
 
-.top-bar .search-bar input {
-    flex-grow: 1;
-    padding: 6px;
+.search-bar input {
+    flex: 1;
+    padding: 10px;
     font-size: 14px;
 }
 
-.top-bar .search-bar button {
-    padding: 6px 12px;
+.search-bar button {
+    padding: 10px 15px;
     font-size: 14px;
     background-color: #333;
     color: white;
@@ -38,24 +52,52 @@ body, html {
     cursor: pointer;
 }
 
+.auth-buttons {
+    margin-top: 10px;
+}
+
+.auth-buttons a {
+    font-size: 14px;
+    margin: 0 5px;
+    color: #333;
+}
+
+/* Note Section */
+.note-section {
+    background-color: #fff3cd;
+    color: #856404;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
 /* Category Bar */
 .category-bar {
     background-color: #333;
     color: white;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 10px;
-    width: 100%;
 }
 
 .category-bar a {
     color: white;
     font-size: 14px;
-    text-decoration: none;
+    margin: 5px 10px;
 }
 
-.category-bar a:hover {
-    color: #fdf1b7;
+/* Welcome Banner */
+.welcome-banner {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.welcome-banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 /* Footer */
@@ -63,63 +105,52 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
-    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
 }
 
-/* Bottom Bar */
 .bottom-bar {
-    background-color: #333;
-    color: white;
+    background-color: #fdf1b7;
     text-align: center;
-    padding: 5px;
-    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-.bottom-bar .canada-flag {
-    width: 20px;
-    vertical-align: middle;
+.canada-flag {
+    width: 18px;
+    height: auto;
+    margin-left: 5px;
 }
 
-/* Media Queries for Mobile */
+/* Mobile Styles */
 @media (max-width: 768px) {
-
-    /* Top Bar */
     .top-bar {
-        padding: 10px 5px;
-    }
-
-    .top-bar .search-bar {
-        margin: 0;
-        width: 100%;
-    }
-
-    .top-bar .search-bar input {
-        font-size: 12px;
-    }
-
-    .top-bar .search-bar button {
-        font-size: 12px;
-    }
-
-    /* Category Bar */
-    .category-bar {
         padding: 5px;
+    }
+
+    .search-bar {
         flex-direction: column;
-        align-items: center;
+    }
+
+    .search-bar input, .search-bar button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .auth-buttons a {
+        font-size: 12px;
     }
 
     .category-bar a {
         font-size: 12px;
-        margin: 5px 0;
     }
 
-    /* Footer */
-    footer {
-        padding: 5px;
+    .note-section {
+        font-size: 12px;
     }
 
-    .bottom-bar {
-        padding: 5px;
+    footer, .bottom-bar {
+        font-size: 12px;
     }
 }
