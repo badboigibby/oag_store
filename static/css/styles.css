@@ -6,6 +6,8 @@ body, html {
     font-family: Arial, sans-serif;
     width: 100%;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    touch-action: manipulation; /* Prevent zooming on mobile */
+    user-select: none; /* Prevent text selection */
 }
 
 /* Top Bar */
@@ -17,11 +19,10 @@ body, html {
     padding: 10px 20px;
     width: 100%;
     box-sizing: border-box;
-    position: relative;
 }
 
 .logo img {
-    max-height: 40px; /* Adjust logo size for mobile */
+    max-height: 40px;
     max-width: 100%;
 }
 
@@ -30,6 +31,7 @@ body, html {
     margin: 0 10px;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
 
 .search-bar input {
@@ -37,6 +39,7 @@ body, html {
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ccc;
+    max-width: 60%; /* Reduced width for logo and buttons */
 }
 
 .search-bar button {
@@ -51,7 +54,6 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: auto;
 }
 
 .auth-buttons a {
@@ -59,6 +61,21 @@ body, html {
     color: #333;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+    text-align: center;
+    background-color: #fdf1b7;
+    background-image: url('static/your-banner-image.jpg'); /* Replace with your banner path */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 /* Category Bar */
@@ -76,30 +93,25 @@ body, html {
     text-decoration: none;
 }
 
-/* Welcome Banner */
-.welcome-banner {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #fdf1b7;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-    border-radius: 8px;
-    background-image: url('static/your-banner-image.jpg'); /* Replace with your banner path */
-    background-size: cover;
-    background-position: center;
-    width: 100%; /* Ensure full width */
-    height: 200px; /* Adjust height of the banner */
-}
-
 /* Product Section */
 .product-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));  /* Adjust to 3 products per row on mobile */
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 10px;
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
+}
+
+.category {
+    margin-bottom: 20px;
+}
+
+.category-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 .product {
@@ -110,7 +122,7 @@ body, html {
 .product img {
     width: 100%;
     height: auto;
-    max-width: 120px;  /* Adjust image size for mobile */
+    max-width: 120px;
     margin-bottom: 10px;
 }
 
@@ -143,7 +155,7 @@ footer {
 
 /* Bottom Bar */
 .bottom-bar {
-    background-color: #fdf1b7; /* Same yellow color as top bar */
+    background-color: #fdf1b7;
     text-align: center;
     padding: 10px 0;
     font-size: 16px;
@@ -151,68 +163,39 @@ footer {
     margin-top: 20px;
 }
 
-/* Canada Flag */
-.canada-flag {
-    width: 20px; /* Adjust the size of the flag */
-    height: auto;
-    margin-left: 5px; /* Add some space between the text and the flag */
-}
-
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     /* Mobile Layout for Top Bar */
     .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .logo img {
-        max-height: 40px;  /* Smaller logo on mobile */
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .search-bar {
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    .search-bar input {
-        font-size: 14px;
-        padding: 10px;
-        width: 80%; /* Make the search bar a bit smaller */
+        margin-left: 10px;
     }
 
     .auth-buttons {
-        margin-top: 10px;
-        width: 100%;
+        margin-top: 0;
     }
 
-    .category-bar {
-        font-size: 12px;
-    }
-
-    /* Banner Adjustments */
+    /* Welcome Banner Adjustments */
     .welcome-banner {
         font-size: 18px;
-        padding: 10px 0;  /* Slightly smaller padding */
-        height: 200px;  /* Adjust banner height */
+        height: 150px; /* Adjust banner height */
     }
 
     /* Product Section Adjustments */
     .product-section {
-        grid-template-columns: repeat(3, 1fr);  /* 3 products per row on mobile */
+        grid-template-columns: repeat(3, 1fr); /* 3 products per row on mobile */
     }
 
     .product img {
-        max-width: 100%;  /* Adjust image size on mobile */
+        max-width: 100%; /* Adjust image size on mobile */
     }
 
     footer {
         font-size: 14px;
     }
-}
-
-/* Fix Zooming */
-html, body {
-    touch-action: manipulation; /* Prevent zooming on mobile */
-    user-select: none; /* Prevent text selection */
 }
