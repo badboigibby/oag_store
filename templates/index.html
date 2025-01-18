@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>OAG - Your Amazon Affiliate Store</title>
     <link rel="stylesheet" href="static/css/styles.css">
 </head>
@@ -29,15 +29,15 @@
 
     <!-- Category Bar -->
     <nav class="category-bar">
-        <a href="#fashion">Fashion</a>
-        <a href="#beauty-health">Beauty & Health</a>
-        <a href="#sports-games">Sports & Games</a>
-        <a href="#electronics">Electronics</a>
+        <a href="#fashion" aria-label="Fashion Category">Fashion</a>
+        <a href="#beauty-health" aria-label="Beauty and Health Category">Beauty & Health</a>
+        <a href="#sports-games" aria-label="Sports and Games Category">Sports & Games</a>
+        <a href="#electronics" aria-label="Electronics Category">Electronics</a>
     </nav>
 
     <!-- Welcome Banner -->
     <section class="welcome-banner">
-        <img src="{{ url_for('static', filename='images/your-banner-image.jpg') }}" alt="Welcome Banner" class="banner-img">
+        <img src="{{ url_for('static', filename='images/your-banner-image.png') }}" alt="Welcome Banner" class="banner-img">
     </section>
 
     <!-- Product Section -->
@@ -47,10 +47,10 @@
             <div class="product-row">
                 {% for item in items %}
                     <div class="product">
-                        <img src="{{ item['image'] }}" alt="{{ item['name'] }}">
+                        <img src="{{ item['image'] }}" alt="{{ item['name'] }} - Product Image">
                         <p>{{ item['name'] }}</p>
                         <p>{{ item['price'] }}</p>
-                        <a href="{{ item['link'] }}" target="_blank" rel="noopener">Buy Now</a>
+                        <a href="{{ item['link'] }}" target="_blank" rel="noopener noreferrer" aria-label="Buy {{ item['name'] }} Now">Buy Now</a>
                     </div>
                 {% endfor %}
             </div>
@@ -63,8 +63,8 @@
     </footer>
 
     <!-- Bottom Bar with OAG ENGLISH🌍 CANADA Flag -->
-    <div class="bottom-bar">
-        <p>OAG                ENGLISH 🌍                CANADA <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg" alt="Canada Flag" class="canada-flag"></p>
-    </div>
+    <footer class="bottom-bar">
+        <p>OAG ENGLISH 🌍 CANADA <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg" alt="Canada Flag" class="canada-flag"></p>
+    </footer>
 </body>
 </html>
