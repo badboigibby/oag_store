@@ -74,55 +74,31 @@ body, html {
 
 /* Product Section */
 .product-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;  /* Space out products for a more balanced look */
-    margin: 0;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  /* Set a responsive grid layout */
+    gap: 10px;  /* Space between the products */
+    padding: 10px;
 }
 
+/* Individual Product */
 .product {
-    flex: 1 1 calc(33% - 20px); /* Adjust the product width for desktop */
-    margin: 10px;
     text-align: center;
-}
-
-.banner-img {
-    width: 100%;
-    height: auto;
+    margin: 0;
 }
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     .product-section {
-        padding: 10px;
-        justify-content: center;  /* Center products on smaller screens */
+        grid-template-columns: repeat(3, 1fr);  /* 3 products per row on mobile */
     }
 
     .product {
-        flex: 1 1 calc(50% - 20px);  /* Adjust to 2 products per row on medium screens */
-    }
-
-    .product img {
-        max-width: 100%; /* Ensure images are responsive */
+        flex: 1 1 100%; /* Full width on smaller screens */
+        margin: 5px;  /* Reduce margin to fit more items */
     }
 
     .banner-img {
         width: 100%;
-        height: auto;
-    }
-
-    .top-bar, .category-bar, .bottom-bar {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .category-bar {
-        padding: 10px 0;
-    }
-
-    .search-bar {
-        margin: 10px 0;
     }
 }
 
