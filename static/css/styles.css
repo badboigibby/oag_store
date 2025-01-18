@@ -102,11 +102,27 @@ header, nav, section, footer {
 
 /* Product Section */
 .product-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
     padding: 10px;
     margin: 0;
+}
+
+.category {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.category-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.product-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
 .product {
@@ -115,7 +131,7 @@ header, nav, section, footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 10px;
-    margin: 0 auto;
+    width: calc(25% - 15px);
 }
 
 .product img {
@@ -144,6 +160,13 @@ header, nav, section, footer {
 
 .product a:hover {
     background-color: #555;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 15px);
+    }
 }
 
 /* Footer */
