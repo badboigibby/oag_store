@@ -160,23 +160,25 @@ footer {
     font-size: 10px; /* Smaller fonts for links */
 }
 
-/* Full width for products on mobile */
-.product {
-    width: 100%; /* Full-width products for smaller screens */
-    box-sizing: border-box; /* Ensure padding and border are included in the width */
-}
-
-/* Adjust the product row to center the products */
+/* Adjust the product row to use full width */
 .product-row {
     display: grid;
     grid-template-columns: repeat(6, 1fr); /* 6 columns */
     gap: 10px; /* Space between items */
     justify-items: center; /* Center the products horizontally */
     width: 100%;
-    margin: 0 auto; /* Center the grid */
-    padding: 0 5px; /* Adjust padding to eliminate gaps on the sides */
-    box-sizing: border-box; /* Ensure the box-sizing is correct to avoid overflow */
+    margin: 0; /* Remove margins */
+    padding: 0; /* Remove any extra padding */
+    box-sizing: border-box; /* Ensure no overflow */
 }
+
+/* Adjust product container size */
+.product {
+    width: 100%; /* Ensure products take full width of their grid cell */
+    max-width: 160px; /* Ensure product images are not too wide */
+    box-sizing: border-box; /* Ensure padding and borders are included in width calculation */
+}
+
 
 /* Adjust product container size */
 .product {
