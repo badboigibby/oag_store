@@ -102,36 +102,24 @@ header, nav, section, footer {
 
 /* Product Section */
 .product-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensures products fill space without going beyond */
+    gap: 20px;
     padding: 10px;
-    margin: 0;
+    margin: 0 auto; /* Centers the grid */
+    max-width: 100%; /* Ensures the grid doesn’t extend beyond the banner */
+    box-sizing: border-box; /* Prevents padding from causing overflow */
 }
 
-.category {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.category-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.product-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    width: 100%;
-}
-
+/* Ensure the products fit the banner width */
 .product {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 10px;
-    width: calc(25% - 15px);
+    margin: 0;
+    width: 100%; /* Makes sure each product occupies full available space within the grid column */
 }
 
 .product img {
@@ -162,12 +150,21 @@ header, nav, section, footer {
     background-color: #555;
 }
 
+/* Disable zooming in and out */
+html, body {
+    touch-action: manipulation;
+    -ms-touch-action: manipulation;
+    overflow: hidden;
+    user-select: none;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .product {
-        width: calc(50% - 15px);
+    .product-section {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust grid for smaller screens */
     }
 }
+
 
 /* Footer */
 footer {
