@@ -112,38 +112,7 @@ header, nav, section, footer {
     box-sizing: border-box;
 }
 
-/* Product Section */
-.product-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two products per row */
-    gap: 20px;
-    padding: 10px;
-    margin: 0 auto;
-    max-width: 100%;
-    justify-items: center; /* Centers the products horizontally */
-    box-sizing: border-box;
-}
-
-/* Product Section */
-.product-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 products per row */
-    gap: 20px;
-    padding: 10px;
-    margin: 0 auto;
-    width: 100%; /* Ensure products span across the width of the banner */
-    max-width: 100%; /* Prevents overflow beyond the page */
-    justify-items: center; /* Ensures products are centered */
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .product-section {
-        grid-template-columns: repeat(2, 1fr); /* 2 products per row on mobile */
-    }
-}
-
-/* Ensure the products fit the banner width */
+/* Ensure products fit the banner width */
 .product {
     background-color: white;
     border-radius: 8px;
@@ -151,7 +120,7 @@ header, nav, section, footer {
     text-align: center;
     padding: 10px;
     margin: 0;
-    width: 100%; /* Makes sure each product occupies full available space within the grid column */
+    width: 100%; /* Ensures product fills available space within grid */
 }
 
 .product img {
@@ -193,10 +162,15 @@ html, body {
 /* Mobile Styles */
 @media (max-width: 768px) {
     .product-section {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust grid for smaller screens */
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 products per row even on mobile */
+    }
+
+    /* Adjust product grid layout for smaller screens */
+    .product-section {
+        grid-template-columns: repeat(2, 1fr); /* Two products per row */
+        gap: 15px;
     }
 }
-
 
 /* Footer */
 footer {
@@ -253,7 +227,7 @@ footer {
     }
 
     .product-section {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
 }
