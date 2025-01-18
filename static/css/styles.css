@@ -145,7 +145,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     font-size: 12px;
-    width: 100%; /* Make footer span the full width */
+    width: 100%; /* Ensure footer spans edge to edge */
 }
 
 /* Bottom Bar */
@@ -201,7 +201,7 @@ footer {
 
     /* Ensure search, category bar, and footer span edge-to-edge on mobile */
     .search-bar, .category-bar, footer {
-        width: 100%;
+        width: 100%; /* Stretch them edge to edge */
         padding: 5px 0; /* Remove extra padding */
     }
 }
