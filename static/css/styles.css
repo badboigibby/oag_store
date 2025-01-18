@@ -162,5 +162,6 @@ footer {
 
     .product {
         width: 100%; /* Full-width products for smaller screens */
+        box-sizing: border-box; /* Ensure padding and border are included in the width */
     }
 }
