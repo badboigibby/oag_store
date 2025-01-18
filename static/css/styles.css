@@ -32,6 +32,7 @@ header, nav, section, footer {
     display: flex;
     width: 100%;
     max-width: 500px;
+    margin: 0 auto;
 }
 
 .search-bar input {
@@ -51,11 +52,13 @@ header, nav, section, footer {
 
 .auth-buttons {
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 .auth-buttons a {
     font-size: 14px;
-    margin: 0 5px;
     color: #333;
 }
 
@@ -142,13 +145,27 @@ header, nav, section, footer {
 /* Mobile Styles */
 @media (max-width: 768px) {
     .product-section {
-        grid-template-columns: repeat(2, 1fr); /* Keep 2 products per row on mobile */
+        grid-template-columns: 1fr; /* One product per row on mobile */
         gap: 15px;
         padding: 10px 5%; /* Add padding for mobile view */
     }
 
     .product {
         width: 100%; /* Ensure product fills the width */
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+    }
+
+    .search-bar {
+        max-width: 80%;
     }
 }
 
