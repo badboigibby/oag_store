@@ -419,8 +419,6 @@ products = {
 def home():
     # Pass categories and products to the template
     return render_template('index.html', categories=products.keys(), products=products)
-if some_condition:  # Line 425
-    pass  # Placeholder
 
 
 
