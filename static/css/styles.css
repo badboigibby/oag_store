@@ -14,6 +14,7 @@ a {
 header, nav, section, footer {
     width: 100%;
     margin: 0 auto;
+    padding: 0;
 }
 
 /* Top Bar */
@@ -24,6 +25,7 @@ header, nav, section, footer {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    width: 100%;
 }
 
 .logo img {
@@ -35,6 +37,7 @@ header, nav, section, footer {
     flex-grow: 1;
     display: flex;
     margin: 10px 0; /* Space for smaller screens */
+    width: 100%; /* Make the search bar span the full width */
 }
 
 .search-bar input {
@@ -66,6 +69,7 @@ header, nav, section, footer {
     flex-wrap: wrap; /* Allow categories to stack on small screens */
     justify-content: space-around;
     padding: 10px 0;
+    width: 100%;
 }
 
 .category-bar a {
@@ -86,27 +90,37 @@ header, nav, section, footer {
     background-image: url('static/your-banner-image.png'); 
     background-size: cover;
     background-position: center;
+    width: 100%;
 }
 
 /* Product Section */
 .product-section {
     padding: 10px; /* Reduced padding for mobile */
+    width: 100%; /* Full width for product section */
 }
 
+/* Product Row */
 .product-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns for desktop and mobile */
+    gap: 10px; /* Space between items */
+    justify-items: center; /* Center the products horizontally */
+    width: 100%; /* Ensure full width */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    box-sizing: border-box; /* Ensure no overflow */
 }
 
+/* Product */
 .product {
     background-color: white;
     border: 1px solid #ddd;
     padding: 10px;
-    margin: 5px;
     text-align: center;
-    width: 45%; /* Adjusted for mobile */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure products take full width of their grid cell */
+    max-width: 160px; /* Prevent products from stretching too much */
+    box-sizing: border-box; /* Ensure padding and borders are included in width calculation */
+    margin: 0;
 }
 
 .product img {
@@ -131,6 +145,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     font-size: 12px;
+    width: 100%;
 }
 
 /* Bottom Bar */
@@ -141,6 +156,7 @@ footer {
     font-size: 14px;
     font-weight: bold;
     margin-top: 20px;
+    width: 100%;
 }
 
 /* Canada Flag */
@@ -152,44 +168,34 @@ footer {
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
-.top-bar, .category-bar, .welcome-banner, .product-section {
-    padding: 5px; /* Compact spacing */
-}
+    /* Ensure everything from search bar, banner, product section, and footer spans edge-to-edge */
+    .top-bar, .category-bar, .welcome-banner, .product-section, footer, .bottom-bar {
+        width: 100%;
+        padding: 5px 0; /* Compact spacing for mobile */
+    }
 
-.auth-buttons a {
-    font-size: 10px; /* Smaller fonts for links */
-}
+    .auth-buttons a {
+        font-size: 10px; /* Smaller fonts for links */
+    }
 
-/* Adjust the product row to use full width */
-.product-row {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 columns */
-    gap: 10px; /* Space between items */
-    justify-items: center; /* Center the products horizontally */
-    width: 100%;
-    margin: 0; /* Remove margins */
-    padding: 0; /* Remove any extra padding */
-    box-sizing: border-box; /* Ensure no overflow */
-}
+    /* Ensure the product row stretches from edge to edge */
+    .product-row {
+        grid-template-columns: repeat(6, 1fr); /* 6 columns for product row */
+        gap: 10px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
 
-/* Adjust product container size */
-.product {
-    width: 100%; /* Ensure products take full width of their grid cell */
-    max-width: 160px; /* Ensure product images are not too wide */
-    box-sizing: border-box; /* Ensure padding and borders are included in width calculation */
-}
+    /* Adjust product sizing for mobile */
+    .product {
+        width: 100%; /* Full-width products */
+        box-sizing: border-box;
+        max-width: 160px; /* Limit product width */
+    }
 
-
-/* Adjust product container size */
-.product {
-    width: 100%; /* Ensure products take full width of their grid cell */
-    max-width: 180px; /* Limit max-width to prevent overly stretched images */
-    box-sizing: border-box; /* Ensure padding and borders don't exceed the width */
-}
-
-
-/* Adjust padding and margin for better spacing */
-.product-section {
-    padding: 5px; /* Less padding for mobile */
-}
+    /* Ensure there’s no unnecessary space around the products */
+    .product-section {
+        padding: 5px; /* Less padding */
+    }
 }
