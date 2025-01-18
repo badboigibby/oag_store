@@ -31,7 +31,7 @@ header, nav, section, footer {
 
 .search-bar {
     flex-grow: 1;
-    margin: 0 20px;
+    margin: 0 10px; /* Reduced margins for more space */
     display: flex;
 }
 
@@ -39,6 +39,8 @@ header, nav, section, footer {
     flex: 1;
     padding: 8px;
     font-size: 14px;
+    border: 1px solid #ddd; /* Add border for clarity */
+    border-radius: 5px 0 0 5px; /* Rounded corners on the left */
 }
 
 .search-bar button {
@@ -46,6 +48,7 @@ header, nav, section, footer {
     background-color: #333;
     color: white;
     border: none;
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right */
     cursor: pointer;
 }
 
@@ -78,28 +81,31 @@ header, nav, section, footer {
     margin-top: 20px;  /* Add some space from the top */
     border-radius: 8px;  /* Rounded corners for a more modern look */
     background-image: url('static/your-banner-image.jpg'); /* Path to your banner image */
-    background-size: cover; /* Ensures the image covers the banner area */
+    background-size: contain; /* Ensure the entire image is visible */
     background-position: center; /* Keeps the image centered */
+    height: 200px; /* Set a fixed height to display the entire banner */
 }
 
 /* Product Section */
 .product-section {
-    padding: 20px;
+    padding: 10px; /* Reduced padding for more screen space */
 }
 
 .product-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between; /* Distribute products evenly across the screen */
+    margin: 0 auto; /* Center the products on the screen */
+    max-width: 1200px; /* Ensure it doesn’t stretch too wide on large screens */
 }
 
 .product {
     background-color: white;
     border: 1px solid #ddd;
     padding: 10px;
-    margin: 10px;
+    margin: 5px; /* Adjusted margins to fit more products */
     text-align: center;
-    width: 150px;
+    width: calc(33.33% - 10px); /* Three products per row on larger screens */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -115,6 +121,32 @@ header, nav, section, footer {
     color: white;
     padding: 8px 0;
     border-radius: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 10px); /* Two products per row on medium screens */
+    }
+
+    .search-bar {
+        margin: 0; /* Remove margins for small screens */
+    }
+
+    .search-bar input,
+    .search-bar button {
+        font-size: 12px; /* Adjust font size for small devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: calc(100% - 10px); /* One product per row on small screens */
+    }
+
+    .welcome-banner {
+        height: auto; /* Adjust height for smaller screens */
+    }
 }
 
 /* Footer */
