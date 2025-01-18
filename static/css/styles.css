@@ -103,13 +103,28 @@ header, nav, section, footer {
 /* Product Section */
 .product-section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Ensures two products per row */
+    grid-template-columns: repeat(2, 1fr); /* Ensure two products per row */
     gap: 20px;
     padding: 10px;
     margin: 0 auto;
     max-width: 100%;
-    justify-items: center; /* Centers the products horizontally */
+    justify-items: center; /* Center products within each grid item */
     box-sizing: border-box;
+}
+
+/* Ensure the grid adapts to the phone orientation */
+@media (max-width: 768px) {
+    .product-section {
+        grid-template-columns: repeat(2, 1fr); /* Ensure two products per row */
+    }
+}
+
+/* Product Category */
+.category-bar {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Space between category and products */
 }
 
 /* Ensure the products fit the banner width */
