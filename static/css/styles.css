@@ -152,31 +152,34 @@ footer {
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
-    .top-bar, .category-bar, .welcome-banner, .product-section {
-        padding: 5px; /* Compact spacing */
-    }
+.top-bar, .category-bar, .welcome-banner, .product-section {
+    padding: 5px; /* Compact spacing */
+}
 
-    .auth-buttons a {
-        font-size: 10px; /* Smaller fonts for links */
-    }
+.auth-buttons a {
+    font-size: 10px; /* Smaller fonts for links */
+}
 
-    /* Full width for products on mobile */
-    .product {
-        width: 100%; /* Full-width products for smaller screens */
-        box-sizing: border-box; /* Ensure padding and border are included in the width */
-    }
+/* Full width for products on mobile */
+.product {
+    width: 100%; /* Full-width products for smaller screens */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
 
-    /* Ensure the product row stretches from edge to edge with 6 columns and centered */
+/* Ensure the product row stretches from edge to edge with 6 columns and centered */
 .product-row {
     display: grid;
     grid-template-columns: repeat(6, 1fr); /* 6 columns */
     gap: 10px; /* Space between items */
     justify-items: center; /* Center the items in each column */
-    }
+    grid-template-columns: repeat(6, minmax(0, 1fr)); /* Ensures all products are squeezed into 6 columns */
+    width: 100%;
+}
 
 
-    /* Adjust padding and margin for better spacing */
-    .product-section {
-        padding: 5px; /* Less padding for mobile */
-    }
+
+/* Adjust padding and margin for better spacing */
+.product-section {
+    padding: 5px; /* Less padding for mobile */
+}
 }
