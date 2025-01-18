@@ -160,8 +160,21 @@ footer {
         font-size: 10px; /* Smaller fonts for links */
     }
 
+    /* Full width for products on mobile */
     .product {
         width: 100%; /* Full-width products for smaller screens */
         box-sizing: border-box; /* Ensure padding and border are included in the width */
+    }
+
+    /* Ensure the product row stretches from edge to edge */
+    .product-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+        gap: 10px; /* Space between items */
+    }
+
+    /* Adjust padding and margin for better spacing */
+    .product-section {
+        padding: 5px; /* Less padding for mobile */
     }
 }
