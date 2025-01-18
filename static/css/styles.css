@@ -103,13 +103,14 @@ header, nav, section, footer {
 /* Product Section */
 .product-section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Ensures two products per row */
+    grid-template-columns: 1fr 1fr; /* Two products per row */
     gap: 20px;
     padding: 10px;
-    margin: 0 auto; /* Centers the grid */
+    margin: 0 auto;
     max-width: 100%; /* Ensures the grid doesn’t extend beyond the banner */
     box-sizing: border-box; /* Prevents padding from causing overflow */
 }
+
 
 /* Ensure the products fit the banner width */
 .product {
