@@ -5,7 +5,7 @@ body, html {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     width: 100%;
-    overflow-x: hidden;  /* Prevent horizontal scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Top Bar */
@@ -17,17 +17,17 @@ body, html {
     padding: 10px 20px;
     width: 100%;
     box-sizing: border-box;
-    position: relative;  /* Fix positioning */
+    position: relative;
 }
 
 .logo img {
-    max-height: 50px;  /* Adjust logo size */
+    max-height: 40px; /* Adjust logo size for mobile */
     max-width: 100%;
 }
 
 .search-bar {
     flex-grow: 1;
-    margin: 0 20px;
+    margin: 0 10px;
     display: flex;
     justify-content: flex-start;
 }
@@ -72,22 +72,23 @@ body, html {
 /* Welcome Banner */
 .welcome-banner {
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 0;
     background-color: #fdf1b7;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
     border-radius: 8px;
     background-image: url('static/your-banner-image.jpg'); /* Replace with your banner path */
     background-size: cover;
     background-position: center;
-    width: 100%;  /* Ensure full width */
+    width: 100%; /* Ensure full width */
+    height: 250px; /* Adjust height of the banner */
 }
 
 /* Product Section */
 .product-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Adjust columns to fit the screen */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));  /* Adjust to 3 products per row on mobile */
     gap: 10px;
     padding: 10px;
     width: 100%;
@@ -102,12 +103,12 @@ body, html {
 .product img {
     width: 100%;
     height: auto;
-    max-width: 150px;  /* Adjust image size */
+    max-width: 120px;  /* Adjust image size for mobile */
     margin-bottom: 10px;
 }
 
 .product p {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 5px;
 }
 
@@ -122,6 +123,32 @@ body, html {
 
 .product a:hover {
     background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+    background-color: #fdf1b7; /* Same yellow color as top bar */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Canada Flag */
+.canada-flag {
+    width: 20px; /* Adjust the size of the flag */
+    height: auto;
+    margin-left: 5px; /* Add some space between the text and the flag */
 }
 
 /* Mobile Adjustments */
@@ -158,16 +185,17 @@ body, html {
     /* Banner Adjustments */
     .welcome-banner {
         font-size: 18px;
-        padding: 20px 0;  /* Slightly larger padding */
+        padding: 10px 0;  /* Slightly smaller padding */
+        height: 200px;  /* Adjust banner height */
     }
 
     /* Product Section Adjustments */
     .product-section {
-        grid-template-columns: repeat(2, 1fr);  /* 2 products per row on mobile */
+        grid-template-columns: repeat(3, 1fr);  /* 3 products per row on mobile */
     }
 
     .product img {
-        max-width: 120px;  /* Adjust image size on mobile */
+        max-width: 100%;  /* Adjust image size on mobile */
     }
 
     footer {
@@ -175,28 +203,8 @@ body, html {
     }
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 12px;
-}
-
-/* Bottom Bar */
-.bottom-bar {
-    background-color: #fdf1b7; /* Same yellow color as top bar */
-    text-align: center;
-    padding: 10px 0;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-/* Canada Flag */
-.canada-flag {
-    width: 20px; /* Adjust the size of the flag */
-    height: auto;
-    margin-left: 5px; /* Add some space between the text and the flag */
+/* Fix Zooming */
+html, body {
+    touch-action: manipulation; /* Prevent zooming on mobile */
+    user-select: none; /* Prevent text selection */
 }
