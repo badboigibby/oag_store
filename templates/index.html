@@ -10,6 +10,28 @@
         .bottom-bar p {
             color: black;
         }
+
+        /* Center-align the contact details */
+        .contact-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Style for the buttons */
+        .contact-section a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .contact-section a:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -63,25 +85,16 @@
         {% endfor %}
     </section>
 
-    <!-- Contact Details -->
-    <div class="contact-details">
+    <!-- Contact Details Section -->
+    <section class="contact-section">
         <p>Edmonton, AB - Canada</p>
-    </div>
-
-    <!-- Chat with Us Tab -->
-    <div class="chat-tab">
-        <a href="https://t.me/betoagbot" target="_blank" style="text-decoration: none;">Chat with us</a>
-    </div>
-
-    <!-- Contact Us Tab -->
-    <div class="contact-tab">
-        <a href="https://instagram.com/oagstore2025" target="_blank" style="text-decoration: none;">Contact us</a>
-    </div>
+        <a href="https://t.me/betoagbot" target="_blank">Chat with us</a>
+        <a href="https://instagram.com/oagstore2025" target="_blank">Contact us</a>
+    </section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 OAG Store. All rights reserved.</p>
-        <p>If you'd like to collaborate or promote your products through me, feel free to contact us!</p>
     </footer>
 
     <!-- Bottom Bar -->
