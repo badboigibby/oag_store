@@ -9,11 +9,169 @@ sys.path.append('/home/badoigibbiy/oag_store')  # Your actual project path
 from app import app as application
 
 
-
+ 
 
 # Product data categorized by sections
-products = {
+products = {  
         'Fashion': [
+            {
+               "name": "Peacolate 18Months-12T Toddler Big Girls Pants Clothing Set 2pcs Cotton top and Jeans",
+               "price": "$10 - $39",
+               "image": "https://m.media-amazon.com/images/I/61VRnBvlxrL._AC_SX679_.jpg",
+               "link": "https://amzn.to/4h3jYFt"
+            },
+            {
+               "name": "Rihanna: and the Clothes She Wears Hardcover - April 18, 2023",
+               "price": "$39.00",
+               "image": "https://m.media-amazon.com/images/I/81C1-TzkcDL._SY385_.jpg",
+               "link": "https://amzn.to/4hdv9ee"
+            },
+            {
+               "name": "ACOCOPY Girls Gymnastics Leotards Sparkly Dance Unitards for Girls 4-11 Years",
+               "price": "$29.88",
+               "image": "https://m.media-amazon.com/images/I/91tgQRHU25L.__AC_SX300_SY300_QL70_ML2_.jpg",
+               "link": "https://amzn.to/4hsKZBX"
+            },
+            {
+               "name": "EVALESS Cropped Puffer Vest Women",
+               "price": "$56.99",
+               "image": "https://m.media-amazon.com/images/I/71u2GZ87poL._AC_SY606_.jpg",
+               "link": "https://amzn.to/40unMKb"
+            },
+            {
+               "name": "Zeagoo Flannels for Women",
+               "price": "$36.99",
+               "image": "https://m.media-amazon.com/images/I/811YeHAEWcL._AC_SX466_.jpg",
+               "link": "https://amzn.to/4fR9aZB"
+            },
+            {
+               "name": "OTEN Women's Two Piece Outfits Sweater Sets",
+               "price": "$82.99",
+               "image": "https://m.media-amazon.com/images/I/51SUqIzrXzL._AC_SY606_.jpg",
+               "link": "https://amzn.to/4haz9vY"
+            },
+            {
+               "name": "Basicspace Women's Scoop Neck Long Sleeve",
+               "price": "$28.99",
+               "image": "https://m.media-amazon.com/images/I/61BUFupVY7L._AC_SY606_.jpg",
+               "link": "https://amzn.to/429wTRv"
+            },
+            {
+               "name": "Taylor Swift Style: Fashion Through the Eras Hardcover",
+               "price": "$27.99",
+               "image": "https://m.media-amazon.com/images/I/71ixsuQYb+L._SY425_.jpg",
+               "link": "https://amzn.to/4gOjpPK"
+            },
+            {
+               "name": "JTAISC Women Crewneck Oversized Sweatshirt",
+               "price": "$29.99",
+               "image": "https://m.media-amazon.com/images/I/81evnRpjADL._AC_SY606_.jpg",
+               "link": "https://amzn.to/4haz9vY"
+            },
+            {
+               "name": "Sunzel Workout Leggings for Women",
+               "price": "$23.99",
+               "image": "https://m.media-amazon.com/images/I/61I7FpgX9IL._AC_SY606_.jpg",
+               "link": "https://amzn.to/4jbzOPB"
+            },
+            {
+               "name": "Fashion Angels Fashion Design Portfolio",
+               "price": "$14.03",
+               "image": "https://m.media-amazon.com/images/I/91tgQRHU25L.__AC_SX300_SY300_QL70_ML2_.jpg",
+               "link": "https://amzn.to/40qTQP0"
+            },
+            {
+               "name": "YEOREO Professional Women Workout Shorts",
+               "price": "$23.99",
+               "image": "https://m.media-amazon.com/images/I/61Pk5y2cgJL._AC_SX466_.jpg",
+               "link": "https://amzn.to/4akG3Ni"
+            },
+            {
+               "name": "YEOREO Scrunch Butt Workout Shorts Women",
+               "price": "$29.99",
+               "image": "https://m.media-amazon.com/images/I/812TPtYeuOL._AC_SX466_.jpg",
+               "link": "https://amzn.to/40duTVF"
+            },
+            {
+               "name": "BenSorts Women Men Pillow Sandals",
+               "price": "$26.99",
+               "image": "https://m.media-amazon.com/images/I/71eSyLKOd8L._AC_SX625_.jpg",
+               "link": "https://amzn.to/4hdOegF"
+            },
+            {
+               "name": "Boutique Fleece Belt Bag",
+               "price": "$27.99",
+               "image": "https://m.media-amazon.com/images/I/81Dlu8ZsY9L._AC_SX679_.jpg",
+               "link": "https://amzn.to/4gOGHoF"
+            },
+            {
+                "name": "FRIENDLY DIAMONDS Diamond Pendant Necklace For Women | 1 Carat - 3 Carat IGI Certified Lab Grown Diamond",
+                "price": "$1,170.00",
+                "image": "https://m.media-amazon.com/images/I/61aGa+rHWAL._AC_SX679_.jpg",
+                "link": "https://amzn.to/4afexRl"
+            },
+            {
+                "name": "Little Book of Dolce & Gabbana: The story of the iconic fashion house Hardcover - Nov. 7 2024",
+                "price": "$22.99",
+                "image": "https://m.media-amazon.com/images/I/619n9vdIg3L._SY425_.jpg",
+                "link": "https://amzn.to/4aePr4X"
+            },
+            {
+                "name": "vinnercoco High Top Sneakers for Women Canvas Shoes Fruits Embroidery High Tops Women Casual Shoes Lace Up Fashion Sneakers",
+                "price": "$32.99",
+                "image": "https://m.media-amazon.com/images/I/71mMjUAfntL._AC_SY625_.jpg",
+                "link": "https://amzn.to/4gOaZaR"
+            },
+            {
+                "name": "New Balance Mens 608 V5 Casual Comfort",
+                "price": "$46.09",
+                "image": "https://m.media-amazon.com/images/I/71vdp4uqBqL._AC_SX575_.jpg",
+                "link": "https://amzn.to/40qr9BI"
+            },
+            {
+                "name": "ZMBCYG Womens Shoes Running Walking Slip On Sport Sneakers Casual Work Tennis Gym Lightweight Comfortable Shoes",
+                "price": "$33.99",
+                "image": "https://m.media-amazon.com/images/I/61d1fzlJAcL._AC_SY625_.jpg",
+                "link": "https://amzn.to/4fU99UA"
+            }
+        ],
+        'Health & Beauty': [
+            {
+                "name": "SMART DK Purse Insert Organizer for dior book tote Large Bag Insert Premium Purse Felt Insert Multiple Pockets, Dark Gray, Small",
+                "price": "$35.99",
+                "image": "https://m.media-amazon.com/images/I/61aORirlcOL._AC_SX679_.jpg",
+                "link": "https://amzn.to/4h0SUXk"
+            },
+            {
+                "name": "5 Couleurs Eyeshadow Palette - 439 Copper by Christian Dior for Women - 0.24 oz Eye Shadow",
+                "price": "$123.11",
+                "image": "https://m.media-amazon.com/images/I/71DrNP-BASL._AC_SX425_.jpg",
+                "link": "https://amzn.to/4hnq9DY"
+            },
+            {
+                "name": "Sauvage Elixir by Christian Dior for Men - 3.4 oz Perfume Spray",
+                "price": "$126.55",
+                "image": "https://m.media-amazon.com/images/I/51cZJe31YFL._AC_SX425_.jpg",
+                "link": "https://amzn.to/4hsuGVH"
+            },
+            {
+                "name": "KARUIZI All in One Makeup Kit for Makeup storage bag 2X14",
+                "price": "$39.98",
+                "image": "https://m.media-amazon.com/images/I/71n6kWjp+xL._AC_SX679_.jpg",
+                "link": "https://amzn.to/42qGoff"
+            },
+            {
+                "name": "KARUIZI All in One Makeup Kit for Makeup storage bag 2X14",
+                "price": "39.98",
+                "video": "https://a.co/d/bUXlBLs",
+                "link": "https://amzn.to/40wH2VY"
+            },
+            {
+                "name": "Ri Ri by Rihanna Eau De Parfum Spray (Tester) 3.4 oz",
+                "price": "$84.99",
+                "image": "https://m.media-amazon.com/images/I/51dhj0dEQ7L._AC_SX679_.jpg",
+                "link": "https://amzn.to/3WxvC33"
+            },
             {
                 "name": "LANEIGE Lip Sleeping Mask: Nourish, Hydrate, Vitamin C, Murumuru & Shea Butter, Antioxidants, Flaky, Dry Lips",
                 "price": "$32.50",
