@@ -1,12 +1,13 @@
 from flask import Flask, render_template
 
-app = Flask(__name__)  # Initialize the Flask ap
+app = Flask(__name__)  # Initialize the Flask app
 
 import sys
-sys.path.append('/home/badoigibbiyoag_store')  # Your actual project path
+sys.path.append('/home/badoigibbiy/oag_store')  # Your actual project path
 
 # Import your Flask app from the correct file (app.py)
 from app import app as application
+
 
 
 
@@ -180,8 +181,31 @@ products = {
               "price": "$194.82",
               "image": "https://m.media-amazon.com/images/I/811I7LjgFAL._AC_SY695_.jpg",
               "link": "https://amzn.to/4j4gwM6"
-
-            }
+            },
+            {
+              "name": "Libin Men's Lightweight Joggers",
+              "price": "$33.98",
+              "image": "https://m.media-amazon.com/images/I/716YYMwItdL._AC_SY741_.jpg",
+              "link": "https://amzn.to/3WprFgS"
+            },
+            {
+              "name": "Wkwmrpet Womens Oversized Crewneck Sweatshirts Long Sleeve Fleece Pullover Sweaters Casual Workout Tops Fall Winter Clothes",
+              "price": "$40.99",
+              "image": "https://m.media-amazon.com/images/I/81yTc9JggVL._AC_SX466_.jpg",
+              "link": "https://amzn.to/4g8iBUF"
+            },
+            {
+              "name": "Outdoor Ventures Men's Lightweight Softshell Jacket Fleece Lined Hooded Water Resistant Winter Hiking Windbreaker Jackets",
+              "price": "$61.59",
+              "image": "https://m.media-amazon.com/images/I/719AibNfs1L._AC_SX466_.jpg",
+              "link": "https://amzn.to/4gYx7zG"
+            },
+            {
+              "name": "Eniloyal Sweatshirt for Women Long Sleeve Crewneck Pullover Hoodies Shirts Loose Fall Tops Sweaters 2024 Trendy Clothes",
+              "price": "$31.99",
+              "image": "https://m.media-amazon.com/images/I/71GOHxmqFwL._AC_SY606_.jpg",
+              "link": "https://amzn.to/40DEUwR"
+            },
             # Add more fashion items here...
         ],
         'Beauty & Health': [
